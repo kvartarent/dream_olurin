@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols default tuning */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Ваши кастомные классы из прежнего <style type="text/tailwindcss"> перенесём сюда */
+.mist-overlay {
+  background: radial-gradient(circle at center, transparent 0%, rgba(25, 16, 34, 0.8) 70%, rgba(25, 16, 34, 1) 100%);
+  pointer-events: none;
+}
+
+.glow-effect {
+  box-shadow: 0 0 40px 10px rgba(140, 43, 238, 0.15);
+}
+
+/* Анимации можно оставить как раньше */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+/* (и т.д. — остальные keyframes/классы можно перенести позже; сейчас главное — чтобы проект завёлся) */
